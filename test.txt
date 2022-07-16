@@ -1,0 +1,43 @@
+A list of possible issues
+
+Eventlistener: 
+
+- The onchange event is rerendering on every letter (most likely)
+- There mat a typo in the onchange event 
+
+local storage:
+- It may have an outdated value in the local storage (most likely)
+- check that there aren't no typos or misspellings
+
+JS Api layer:
+
+- check that the fetch request is searching the category section (most likely)
+- connected to the correct database
+
+Hello Cameron, 
+
+RE: Recommdations are Down
+
+I have come up with a few possibles reasons why it could down and I beileve that with some guidance you got this.
+
+First, it's most likely an issue the event listener
+
+- check the onchange event function, it should read  setReccomendations(previousRecomedations + reccomedation)
+-  compare the useState hook, it should be the same
+-  it should start working correctly
+
+docs: 
+useState Hook: https://reactjs.org/docs/hooks-state.html
+onchange event: https://upmostly.com/tutorials/react-onchange-events-with-examples
+
+second, less likely but still likely check the local storage
+
+- right click on the webpage,  click inspect and move over to the Storage section
+- click on local storage
+- compare to you current search term, it should be the same.
+- if not look for the localstorage.setItem is saving the correct value.
+
+docs
+localstorage: https://blog.logrocket.com/using-localstorage-react-hooks/
+
+You got the cameron, feel free to message me if you have any questions
